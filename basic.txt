@@ -1,0 +1,58 @@
+Basic Ubuntu Commands
+
+1. Navigation:
+   - ls          : list directory contents
+   - cd          : change directory
+   - pwd         : print working directory
+
+2. File & Directory Management:
+   - mkdir       : create directory
+   - rmdir       : remove empty directory
+   - rm          : remove files or directories
+   - cp          : copy files or directories
+   - mv          : move or rename files
+   - touch       : create an empty file
+
+3. Viewing Files:
+   - cat         : show file content
+   - less        : view file content page by page
+   - head        : show first lines of a file
+   - tail        : show last lines of a file
+
+4. Package Management (APT):
+   - sudo apt update        : update package list
+   - sudo apt upgrade       : upgrade packages
+   - sudo apt install <pkg> : install a package
+   - sudo apt remove <pkg>  : remove a package
+
+5. Permissions:
+   - chmod       : change file permissions
+   - chown       : change file owner
+   - sudo        : run command as administrator
+
+6. System Info:
+   - uname -a    : show system info
+   - df -h       : show disk usage
+   - free -h     : show memory usage
+   - top         : monitor system processes
+   - htop        : interactive system monitor (if installed)
+
+7. Network:
+   - ifconfig    : show network interfaces (may require net-tools)
+   - ping        : test network connectivity
+   - curl        : download from URLs
+   - wget        : download files
+
+8. Archives:
+   - tar -xvf    : extract tar files
+   - tar -cvf    : create tar files
+   - unzip       : extract zip files
+
+9. Search:
+   - find        : locate files
+   - grep        : search text in files
+
+10. System Control:
+   - reboot      : restart system
+   - shutdown    : shut down system
+

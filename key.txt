@@ -1,0 +1,3 @@
+brave
+nautilus trash:///
+

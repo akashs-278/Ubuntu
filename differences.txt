@@ -1,0 +1,105 @@
+Title: Differences Between Java 17 and Java 21 (LTS vs LTS)
+
+1. Introduction
+Java 17 (released in 2021) and Java 21 (released in 2023) are both Long-Term Support versions.
+Java 21 introduces major improvements in performance, concurrency, language features, and
+garbage collection. This document compares both versions.
+
+------------------------------------------------------------
+
+2. Feature Comparison Table
+
+Category                             | Java 17               | Java 21
+-------------------------------------|------------------------|----------------------------
+Release Year                         | 2021                  | 2023
+LTS Support                          | Yes                   | Yes (Extended)
+Virtual Threads (Project Loom)       | No                    | Yes
+Pattern Matching                     | Partial               | More complete + stable
+Switch Pattern Matching              | Preview only          | Final
+Record Patterns                      | No                    | Yes
+Sequenced Collections                | No                    | Yes
+String Templates                     | No                    | Preview
+Foreign Function & Memory API (FFM)  | Early incubator       | More mature
+Garbage Collection                   | G1 default            | Improved G1 + ZGC + Gen ZGC
+Performance                          | Very good             | Much better
+Security Updates                     | Older                 | Newer, stronger defaults
+
+------------------------------------------------------------
+
+3. Major Improvements in Java 21
+
+3.1 Virtual Threads
+- Lightweight threads that scale to thousands or millions.
+- Useful for servers, concurrency, and microservices.
+- Not present in Java 17.
+
+3.2 Pattern Matching Enhancements
+- Java 21 finalizes pattern matching for switch.
+- Adds record patterns for destructuring.
+- Not supported in Java 17.
+
+3.3 Sequenced Collections
+- Provides consistent iteration order.
+- Not present in Java 17.
+
+3.4 Foreign Function & Memory API
+- More stable API for calling native code without JNI.
+- Improved over the incubator version in Java 17.
+
+3.5 Garbage Collection
+- Java 21 introduces Generational ZGC.
+- Better memory efficiency, lower latency, improved performance.
+
+------------------------------------------------------------
+
+4. Language Improvements in Java 21
+- Record patterns
+- Enhanced switch patterns
+- String templates (preview)
+- Better concurrency APIs
+
+Java 17 lacks these features.
+
+------------------------------------------------------------
+
+5. Security Enhancements
+Java 21 includes:
+- Stronger cryptography defaults
+- Updated TLS implementations
+- Improved class loader security
+
+------------------------------------------------------------
+
+6. Performance Differences
+Java 21 offers:
+- Faster startup
+- Better JIT optimizations
+- Lower memory usage
+- Faster and more predictable GC
+- Massive concurrency gains with virtual threads
+
+------------------------------------------------------------
+
+7. Which Version Should You Use?
+
+Use Java 21 if:
+- You are starting a new project
+- Using modern frameworks (Spring Boot 3+, Quarkus, Micronaut)
+- You need high concurrency or async performance
+- You want longer LTS support
+
+Use Java 17 if:
+- You must maintain older enterprise systems
+- Your tools support only Java 17
+- Your organization restricts upgrades
+
+------------------------------------------------------------
+
+8. Conclusion
+Java 21 represents a major advancement over Java 17 in performance, concurrency, and language
+features. It is recommended for modern development, while Java 17 remains suitable for
+compatibility and legacy systems.
+
+------------------------------------------------------------
+End of Document
+
