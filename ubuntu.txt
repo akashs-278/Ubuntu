@@ -55,4 +55,7 @@ Open  RGB
 	sudo apt --fix-broken install
 
 YT-DLP
--> sudo apt install yt-dlp   
+->	sudo apt install yt-dlp  
+
+VLC Media Player
+->	sudo snap install vlc
