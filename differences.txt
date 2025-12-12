@@ -101,5 +101,5 @@ features. It is recommended for modern development, while Java 17 remains suitab
 compatibility and legacy systems.
 
 ------------------------------------------------------------
-End of Document
 
+End of Document
