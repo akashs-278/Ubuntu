@@ -1,3 +1,9 @@
-brave
-nautilus trash:///
+#1 opens brave
+->  brave
+
+#2 opens transh in files
+->  nautilus trash:///
+
+#3 for interactive screenshot
+->  
 
