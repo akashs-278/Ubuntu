@@ -3,7 +3,3 @@
 
 #2 opens transh in files
 ->  nautilus trash:///
-
-#3 for interactive screenshot
-->  
-
