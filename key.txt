@@ -1,5 +1,0 @@
-#1 opens brave
-->  brave
-
-#2 opens transh in files
-->  nautilus trash:///
