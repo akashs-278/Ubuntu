@@ -171,3 +171,70 @@ Flathub is the best place to get Flatpak apps. To enable it, run:
 >```
 
 To complete setup, restart your system. Now all you have to do is install apps!
+
+---
+
+## 17. Google-Chrome
+Download the official .deb package
+> #### bash
+> ---
+> ```bash
+> wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+> ```
+
+Install it
+> #### bash
+> ---
+> ```bash
+> sudo apt install ./google-chrome-stable_current_amd64.deb
+> ```
+
+Verify
+> #### bash
+> ---
+> ```bash
+> google-chrome --version
+> ```
+
+---
+
+## Brave Install 
+Install Brave Browser on Ubuntu (Official Repo Method).  
+Install required packages
+
+> #### bash
+> ---
+> ```bash
+> sudo apt install curl
+> ```
+
+Add Brave’s GPG key
+> #### bash
+> ---
+> ```bash
+> sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg \
+https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+> ```
+
+Add Brave repository
+> #### bash
+> ---
+> ```bash
+> echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] \ https://brave-browser-apt-release.s3.brave.com/ stable main" | \
+> sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+> ```
+
+Install Brave
+> #### bash
+> ---
+> ```bash
+> sudo apt update
+sudo apt install brave-browser
+> ```
+
+Verify
+> #### bash
+> ---
+> ```bash
+> brave-browser --version
+> ```
