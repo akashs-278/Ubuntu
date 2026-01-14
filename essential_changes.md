@@ -28,7 +28,7 @@ Doesn't requires password
 download and install C, C++, Python packages.
 >Terminal
 >```
->sudo apt install build essential
+>sudo apt install build-essential
 >```
 
 ## 4. Update kernel + Major changes 
