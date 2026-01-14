@@ -228,7 +228,7 @@ Install Brave
 > ---
 > ```bash
 > sudo apt update
-sudo apt install brave-browser
+> sudo apt install brave-browser
 > ```
 
 Verify
