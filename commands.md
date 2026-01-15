@@ -1,4 +1,4 @@
-# Ubuntu Basic Navigation & File Commands Cheat Sheet
+# Ubuntu Basic to Advance Commands Cheat Sheet
 
 ## 1. Directory Navigation Commands
 
