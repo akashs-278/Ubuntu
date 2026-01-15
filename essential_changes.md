@@ -6,6 +6,8 @@
 >sudo apt update
 >```
 
+---
+
 ## 2. Upgrade
 >```terminal
 >sudo apt upgrade
@@ -24,6 +26,8 @@ Requires password
 >``` 
 Doesn't requires password
 
+---
+
 ## 3. Install ```build essential```
 download and install C, C++, Python packages.
 >Terminal
@@ -31,17 +35,22 @@ download and install C, C++, Python packages.
 >sudo apt install build-essential
 >```
 
+---
+
 ## 4. Update kernel + Major changes 
 >Terminal
 >```
 >sudo apt full-upgrade -y
 >```
 
+---
+
 ## 5. Remove unused packages
 >```
 >sudo apt autoremove -y
 >```
 
+---
 
 ## 6. Brightness Controller
 Step 1 :- Open Terminal and below command
@@ -69,20 +78,28 @@ Step 5 :- Restart your system
 >sudo reboot
 >```
 
+---
+
 ## 7. Extensions
 >```
 >sudo apt install gnome-shell-extension-prefs
 >```
+
+---
 
 ## 8. Extensions Manager
 >```
 >sudo apt install gnome-shell-extension-manager
 >```
 
+---
+
 ## 9. Tweaks
 >```
 >sudo apt install gnome-tweaks
 >```
+
+---
 
 ## 10. Github
 How to install github desktop on ubuntu:
@@ -102,6 +119,8 @@ How to install github desktop on ubuntu:
 >sudo dpkg -i GitHubDesktop-linux-3.2.0-linux1.deb
 >```
 
+---
+
 ## 11. Open  RGB
 Step 1 :- Download ```.deb``` file from
 >```
@@ -119,6 +138,8 @@ Step 3 :- If missing some dependencies fix it
 >sudo apt --fix-broken install
 >```
 
+---
+
 ## 12. YT-DLP
 Direct download and install from system.
 >Terminal
@@ -132,15 +153,21 @@ Dowbload and install from python package manager ```pip```
 >pip install yt-dlp
 >```
 
+---
+
 ## 13. VLC Media Player
 >```
 >sudo snap install vlc
 >```
 
+---
+
 ## 14. Blender
 >```
 >sudo apt install blender
 >```
+
+---
 
 ## 15. Mission Center
 >```
@@ -151,6 +178,8 @@ Dowbload and install from python package manager ```pip```
 >```
 >flatpak run io.missioncenter.MissionCenter
 >```
+
+---
 
 ## 16. Flathub `Software` store
 To install Flatpak on Ubuntu 18.10 (Cosmic Cuttlefish) or later, open the Terminal app and run:
