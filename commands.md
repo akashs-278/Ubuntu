@@ -84,6 +84,8 @@ cp -r folder destination
 > mv file /path/to/destination
 > ```
 
+---
+
 ## 3. Viewing File Contents
 ### `cat` :- Displays file contents.
 > #### bash
@@ -122,6 +124,8 @@ cp -r folder destination
 > tail -n 10 file.txt
 > ```
 
+---
+
 ## 4. File Information & Search
 ### `stat` :- Displays detailed file information.
 > #### bash
@@ -151,6 +155,8 @@ cp -r folder destination
 > locate file.txt
 > ```
 
+---
+
 ## 5. Permissions & Ownership
 ### `chmod` :- Changes file permissions.
 > #### bash
@@ -168,6 +174,8 @@ cp -r folder destination
 > chown user:group file.txt
 > ```
 
+---
+
 ## 6. Disk & File Size
 ### `du` :- Shows directory size.
 > #### bash
@@ -182,6 +190,8 @@ cp -r folder destination
 > ```bash
 > df -h
 > ```
+
+---
 
 ## 7. Helpful Shortcuts
 | Shortcut |	Description |
