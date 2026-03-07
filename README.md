@@ -1,2 +1,4 @@
-# This Repository contains all the basic necessity commands, shortcuts and software information those are related to **_`"UBUNTU"`_** a **_`"Linux"`_** distribution.
+<h1 align="center">
+<img src="logo/UbuntuCoF.svg" width="200">
+</h1>
 
