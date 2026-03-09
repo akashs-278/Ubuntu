@@ -1,4 +1,4 @@
 <h1 align="center">
-<img src="logo/UbuntuCoF.svg" width="200">
+<img src="logo/ubuntu-seeklogo.png" width="200">
 </h1>
 
