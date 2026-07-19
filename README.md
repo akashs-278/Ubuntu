@@ -5,7 +5,6 @@
 ---
 
 This repository consists of everything about `Ubuntu` a `Linux` distribution.
-
 ---
 
 
