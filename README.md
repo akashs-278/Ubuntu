@@ -1,5 +1,5 @@
 <div align="center">
-<img src="images/ubuntu-logo.png" width="200">
+<img src="./additional-files/Ubuntu.svg" width="200">
 </div>
 
 ---
