@@ -1,6 +1,6 @@
-<h1 align="center">
+<div align="center">
 <img src="images/ubuntu-logo.png" width="200">
-</h1>
+</div>
 
 This repository consists of everything about `Ubuntu` a `Linux` distribution.
 
