@@ -1,5 +1,5 @@
 <h1 align="center">
-<img src="logo/ubuntu-seeklogo.png" width="200">
+<img src="images/ubuntu-seeklogo.png" width="200">
 </h1>
 
 This repository consists of everything about `Ubuntu` a `Linux` distribution.
