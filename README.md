@@ -2,9 +2,9 @@
 <img src="images/ubuntu-logo.png" width="200">
 </div>
 
+---
+
 This repository consists of everything about `Ubuntu` a `Linux` distribution.
-
-
 
 ---
 
