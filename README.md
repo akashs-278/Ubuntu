@@ -1,90 +1,85 @@
 <div align="center">
-<img src="./additional-files/Ubuntu.svg" width="200">
+
+![Ubuntu Linux Banner](./assets/banner.svg)
+
+# 🐧 Ubuntu Linux — Complete Learning Guide
+### *From Beginner to Advanced Power User*
+
+[![Linux](https://img.shields.io/badge/Linux-Ubuntu_24.04_LTS-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com)
+[![Modules](https://img.shields.io/badge/Modules-12_Complete_Modules-39D353?style=for-the-badge&logo=bookstack&logoColor=white)](#-course-syllabus)
+[![Commands](https://img.shields.io/badge/Commands-100%2B_Explained-58A6FF?style=for-the-badge&logo=gnometerminal&logoColor=white)](./commands.md)
+[![License](https://img.shields.io/badge/License-MIT-blue.style=for-the-badge)](./LICENSE)
+
+---
+
+### 💡 Welcome to the Ultimate Ubuntu Linux Course!
+Whether you are a **complete beginner** installing Linux for the first time, a **student**, a **developer**, or an aspiring **System Administrator / DevOps Engineer**, this structured course will take you step-by-step from foundational concepts to advanced command-line mastery and shell scripting.
+
 </div>
 
 ---
 
-This repository consists of everything about `Ubuntu` a `Linux` distribution.
+## 🎯 Course Overview
+
+- 📦 **12 Comprehensive Modules** covering theoretical principles, practical CLI usage, and real-world sysadmin workflows.
+- 💻 **100+ Essential Commands** with detailed working principles, syntax breakdowns, and flags.
+- 🐚 **Shells & Scripting Deep Dive** (Bash, Zsh, Fish) with production-ready code templates.
+- ⚙️ **Hands-on System Administration** — Process management, systemd services, networking, firewall, LVM, and Docker.
+
 ---
 
+## 📚 Complete Course Curriculum
 
-### Ubuntu-Linux Course Syllabus
-#### Course Overview
+| Module | Topic | Key Skills & Concepts Covered | Link |
+| :---: | :--- | :--- | :---: |
+| **01** | **Introduction to Linux & Ubuntu** | OS Architecture, Linux Kernel vs Distros, Ubuntu Versions & LTS, Desktop vs Server | [📖 Start Module](./modules/01-introduction.md) |
+| **02** | **Installation Guide** | ISO Download, Bootable USB (Etcher/`dd`), Dual-Boot, VirtualBox VM, WSL2 Setup | [📖 Start Module](./modules/02-installation.md) |
+| **03** | **Linux File System (FHS)** | "Everything is a file", FHS Directory Tree (`/etc`, `/var`, `/proc`), Absolute vs Relative Paths | [📖 Start Module](./modules/03-filesystem.md) |
+| **04** | **Navigation & File Management** | `pwd`, `cd`, `ls`, `mkdir`, `cp`, `mv`, `rm`, `tar`, `zip`, Symlinks, Wildcards & Globbing | [📖 Start Module](./modules/04-navigation-files.md) |
+| **05** | **Text Processing & Search** | `cat`, `less`, `head`, `tail -f`, `find`, `grep`, `sed`, `awk`, Redirection `>` & Pipes `\|` | [📖 Start Module](./modules/05-text-search.md) |
+| **06** | **Users, Groups & Permissions** | `useradd`, `usermod`, `chmod` (rwx/octal), `chown`, SUID/SGID/Sticky Bit, `sudoers`, ACLs | [📖 Start Module](./modules/06-users-permissions.md) |
+| **07** | **Software Management** | Package Repositories, `apt`, `dpkg`, `snap`, `flatpak`, `AppImage`, Compiling from Source | [📖 Start Module](./modules/07-software-management.md) |
+| **08** | **Networking Commands** | `ip`, `ping`, `traceroute`, `dig`, `ss`, `nmap`, `wget`, `curl`, `ssh`, `scp`, `rsync`, UFW Firewall | [📖 Start Module](./modules/08-networking.md) |
+| **09** | **Process & System Management** | `ps`, `top`/`htop`, `kill`, Background/Foreground (`bg`/`fg`), `systemctl`, `journalctl`, `cron` | [📖 Start Module](./modules/09-process-system.md) |
+| **10** | **Shells in Ubuntu** | Bash, Zsh (Oh My Zsh), Fish, Config (`.bashrc`), Environment Variables, Aliases, Functions | [📖 Start Module](./modules/10-shells.md) |
+| **11** | **Shell Scripting (Bash)** | Variables, User Input, Conditionals, Loops, Arrays, String Ops, Exit Codes, Trap & Functions | [📖 Start Module](./modules/11-shell-scripting.md) |
+| **12** | **Advanced Sysadmin & Security** | Kernel Tuning (`sysctl`), Performance, LVM, Disk Quotas, Docker, iptables, Security Hardening | [📖 Start Module](./modules/12-advanced.md) |
 
-**Course Title:** Ubuntu Linux Fundamentals
-**Duration:** 6–8 Weeks (36–48 hours total)
-**Target Audience:**
-* Beginners to Linux
-* Students in IT / Computer Science
-* Developers and system administrators
-
-**Prerequisites**
-* Basic computer knowledge
-* Familiarity with operating systems (e.g., Microsoft Windows or macOS)
-
-**Learning Outcomes**
-By the end of the course students will be able to:
-
-* Install and configure Ubuntu
-* Use the Linux command line efficiently
-* Manage files, users, and permissions
-* Install and manage software
-* Perform basic system administration
-* Configure networking and services
 ---
-### 🎯 Quick Navigation
 
-| Sl_No | Topics | Link |
-| ----- | ------ | ---- |
-| 1.    | **Module 1 :** Introduction to Linux & Ubuntu | |
-|       | 1.1 What is Linux? | |
-|       | 1.2 History of Linux | |
-|       | 1.3 Linux distributions overview | |
-|       | 1.4 Introduction to Ubuntu | |
-|       | 1.5 Ubuntu versions and LTS releases | |
-|       | 1.6 Desktop vs Server editions | |
-| 2.    | **Module 2 :** Installing Ubuntu | |
-|       | 2.1 Hardware requirements | |
-|       | 2.2 Downloading Ubuntu ISO | |
-|       | 2.3 Creating bootable USB | |
-|       | 2.4 Installation methods | |
-|       | 2.5.1 Full install | |
-|       | 2.5.2 Dual boot | |
-|       | 2.5.3 Virtual machine | |
-| 3.    | **Module 3 :** Linux File System  | |
-|       | 3.1 Linux directory structure
-|       | 3.2 Root vs home directory | |
-|       | 3.3 Key directories | |
-|       | 3.3.1 /home | |
-|       | 3.3.2 /etc | |
-|       | 3.3.3 /var | |
-|       | 3.3.4 /usr | |
-|       | 3.3.5 /bin | |
-| 4.    | **Module 4 :**  Ubuntu Desktop Basics | |
-|       | 4.1 GNOME interface | |
-|       | 4.2 File manager | |
-|       | 4.3 Settings | |
-|       | 4.4 Software center | |
-| 5.    | **Module 5 :** Basic Linux Commands | |
-|       | 5.1 Navigation | |
-|       | 5.2 File operations | |
-|       | 5.3 Viewing files | |
-|       | 5.4 Searching files | |
-| 6.    | **Module 6 :** Users, Groups & Permissions | |
-|       | 6.1 Linux user accounts | |
-|       | 6.2 Groups | |
-|       | 6.3 File permissions | |
-|       | 6.4 Ownership | |
-| 7.    | **Module 7 :** Software Management | |
-|       | 7.1 Package management
-|       | 7.2 Software repositories
-|       | 7.3 Installing and removing software
-| 8.    | **Module 8 :** Networking Basics | |
-|       | 8.1 Network configuration | |
-|       | 8.2 Checking connectivity | |
-|       | 8.3 IP addresses | |
-| 9.    | **Module 9 :** Process & System Management | |
-|       | 9.1 System processes | |
-|       | 9.2 Monitoring system performance | |
-|       | 8.3 Killing processes | |
-| 10.    | **Module 10 :** Shell & Bash Scripting | []() |
+## ⚡ Quick Reference Guide
+
+- 📄 **[Master Commands Cheat Sheet](./commands.md)** — Comprehensive command reference grouped by domain
+
+---
+
+## 🚀 How to Use This Repository
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/akashs278/ubuntu.git
+   cd ubuntu
+   ```
+
+2. **Follow the Curriculum:**
+   Start with **[Module 01](./modules/01-introduction.md)** and move sequentially through each module.
+
+3. **Practice Commands:**
+   Open an Ubuntu terminal (or WSL2 / VirtualBox) and execute the commands provided in each section to build muscle memory and understand working principles.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! If you find any typos, want to add more command examples, or suggest new modules:
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This repository is licensed under the [MIT License](./LICENSE). Feel free to use, share, and adapt for your own learning or teaching!
