@@ -39,38 +39,112 @@ This makes Linux powerful — you can interact with almost anything using file o
 
 ## 3.2 Linux Directory Structure (FHS)
 
-The **Filesystem Hierarchy Standard (FHS)** defines the standard directory structure in Linux.
+The **Filesystem Hierarchy Standard (FHS)** defines the standard directory layout in Linux. Unlike Windows which uses separate drive letters (`C:\`, `D:\`), Linux organizes everything into a single inverted tree starting from the **Root Directory (`/`)**.
 
+### 📌 1. High-Level Visual Architecture
+
+```mermaid
+graph TD
+    Root["<b>/ (Root Directory)</b><br/><i>Top level of the entire filesystem</i>"]
+
+    subgraph Core["⚙️ Core System & Boot"]
+        Boot["/boot<br/>Kernel & Bootloader"]
+        Lib["/lib & /lib64<br/>Shared System Libraries"]
+        Bin["/bin & /sbin<br/>Essential Commands & Admin Tools"]
+    end
+
+    subgraph Config["🔧 Configuration & Data"]
+        Etc["/etc<br/>System Configurations"]
+        Var["/var<br/>Variable Data & Logs"]
+        Srv["/srv<br/>Service Data (Web, FTP)"]
+    end
+
+    subgraph UserSpace["👤 User Space"]
+        Home["/home<br/>User Personal Directories"]
+        RootUser["/root<br/>Root Superuser Home"]
+        Usr["/usr<br/>User Programs & Binaries"]
+        Opt["/opt<br/>Optional 3rd Party Apps"]
+    end
+
+    subgraph Dynamic["⚡ Virtual & Hardware"]
+        Dev["/dev<br/>Device Files (Hard Disks, USB)"]
+        Proc["/proc<br/>Virtual Process & Kernel Info"]
+        Sys["/sys<br/>Hardware & Kernel Driver Info"]
+        Run["/run<br/>Runtime Temp & PID Locks"]
+        Tmp["/tmp<br/>Temporary Scratchpad"]
+        Media["/media & /mnt<br/>Removable & Temp Mounts"]
+    end
+
+    Root --> Core
+    Root --> Config
+    Root --> UserSpace
+    Root --> Dynamic
+
+    style Root fill:#E95420,stroke:#333,stroke-width:2px,color:#fff
+    style Core fill:#1f2937,stroke:#3b82f6,stroke-width:1px,color:#fff
+    style Config fill:#1f2937,stroke:#f59e0b,stroke-width:1px,color:#fff
+    style UserSpace fill:#1f2937,stroke:#10b981,stroke-width:1px,color:#fff
+    style Dynamic fill:#1f2937,stroke:#8b5cf6,stroke-width:1px,color:#fff
 ```
-/  (Root — the top of everything)
-├── bin/          → Essential user command binaries
-├── boot/         → Boot loader files, Linux kernel
-├── dev/          → Device files (disks, USB, terminals)
-├── etc/          → System configuration files
-├── home/         → User home directories
-│   ├── akash/    → Your home directory (~)
-│   └── john/     → Another user's home
-├── lib/          → Shared libraries
-├── lib64/        → 64-bit shared libraries
-├── media/        → Mount point for removable media (USB, CD)
-├── mnt/          → Temporary mount points
-├── opt/          → Optional/third-party software
-├── proc/         → Virtual filesystem — kernel & process info
-├── root/         → Root user's home directory
-├── run/          → Runtime data (PIDs, sockets)
-├── sbin/         → System administration binaries
-├── srv/          → Data for services (web server files)
-├── sys/          → Virtual filesystem — device & kernel info
-├── tmp/          → Temporary files (cleared on reboot)
-├── usr/          → User programs & utilities
-│   ├── bin/      → Non-essential user binaries
-│   ├── lib/      → Libraries for /usr/bin
-│   ├── local/    → Locally installed programs
-│   └── share/    → Shared data (docs, icons)
-└── var/          → Variable data (logs, databases, mail)
-    ├── log/      → System log files
-    ├── www/      → Web server files (Apache/Nginx)
-    └── spool/    → Print/mail queues
+
+---
+
+### 🧠 2. Memorization Cheat Map (Grouped by Function)
+
+To easily remember the Linux directory structure, keep these **5 Functional Groups** in mind:
+
+| Group | Directory | Memory Mnemonic / Hook | What Lives Here? |
+| :--- | :--- | :--- | :--- |
+| **🚀 Boot & Core** | `/boot` | **Bootloader** | Linux Kernel (`vmlinuz`), Grub bootloader |
+| | `/bin` & `/sbin` | **Binaries** & **System Binaries** | Essential commands (`ls`, `bash`) & Sysadmin tools (`fdisk`, `iptables`) |
+| | `/lib` | **Libraries** | Shared code libraries required by binaries |
+| **⚙️ Config & State** | `/etc` | **Editable Text Configuration** | All system configuration files (`/etc/passwd`, `/etc/nginx/`) |
+| | `/var` | **Variable Data** | Dynamic data changing over time (Logs `/var/log`, databases, queues) |
+| | `/srv` | **Services** | Site-specific data served by system (`/srv/www`, FTP data) |
+| **👤 Users & Apps** | `/home` | **User Homes** | Personal user workspace (`/home/username`), desktop, documents |
+| | `/root` | **Root Home** | Home directory for the `root` superuser (distinct from `/`) |
+| | `/usr` | **User System Resources** | Non-essential user binaries (`/usr/bin`), shared assets (`/usr/share`) |
+| | `/opt` | **Optional Software** | Third-party standalone software packages (e.g., Chrome, Discord) |
+| **🔌 Devices & Mounts** | `/dev` | **Devices** | Hardware node representations (`/dev/sda`, `/dev/null`, `/dev/tty`) |
+| | `/media` | **Removable Media** | Auto-mounted USB drives, optical discs (`/media/user/USB`) |
+| | `/mnt` | **Manual Mounts** | Temporary manual filesystem mount points |
+| **⚡ Virtual & Temp** | `/proc` | **Processes Info** | Virtual RAM-based filesystem: running process IDs, CPU/memory status |
+| | `/sys` | **System Hardware** | Virtual RAM-based filesystem: active kernel device drivers and buses |
+| | `/run` | **Runtime Info** | Volatile state since last boot (PID files, sockets, locks) |
+| | `/tmp` | **Temporary Files** | Scratch space for apps (auto-cleaned on reboot) |
+
+---
+
+### 📂 3. Complete FHS Hierarchy Tree
+
+```text
+/ (Root Directory)
+├── 📂 boot/            → Kernel image (vmlinuz), initramfs, Grub bootloader
+├── 📂 etc/             → System-wide configuration files (passwd, hosts, network)
+├── 📂 home/            → User home spaces
+│   ├── 📂 akash/       → Personal user directory (~/)
+│   └── 📂 john/        → Secondary user workspace
+├── 📂 root/            → Superuser (root) home directory
+├── 📂 bin -> usr/bin   → Essential user binary commands (ls, cp, bash)
+├── 📂 sbin -> usr/sbin → Essential administrative commands (fdisk, ip, reboot)
+├── 📂 lib -> usr/lib   → Shared core libraries needed by system binaries
+├── 📂 usr/             → Secondary hierarchy for user utilities & read-only data
+│   ├── 📂 bin/         → Non-essential application binaries (python3, git)
+│   ├── 📂 lib/         → Application libraries
+│   ├── 📂 local/       → Locally compiled/installed software (/usr/local/bin)
+│   └── 📂 share/       → Architecture-independent shared assets (man pages, icons)
+├── 📂 var/             → Variable data files (frequently modified at runtime)
+│   ├── 📂 log/         → System and service log files (syslog, auth.log)
+│   ├── 📂 www/         → Web server document root (Apache/Nginx)
+│   └── 📂 spool/       → Queues for cron, print, mail tasks
+├── 📂 dev/             → Hardware device node interfaces (sda, null, zero)
+├── 📂 proc/            → Virtual process & kernel information (CPU, RAM, PIDs)
+├── 📂 sys/             → Virtual kernel interface for hardware device drivers
+├── 📂 run/             → Runtime process status (sockets, lock files, PIDs)
+├── 📂 media/           → Automatic mount location for removable storage (USB, CD)
+├── 📂 mnt/             → Manual temporary filesystem mount points
+├── 📂 opt/             → Add-on third-party software packages (e.g. Google Chrome)
+└── 📂 tmp/             → Temporary scratchpad (automatically wiped on boot)
 ```
 
 ---
